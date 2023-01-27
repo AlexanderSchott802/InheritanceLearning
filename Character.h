@@ -24,9 +24,9 @@ public:
         if(attack > enemy->defence){
             int damage = attack - enemy->defence;
             enemy->takeDamage(damage);
-            std::cout << name << " Hits for " << damage << " damage!";
+            std::cout << name << " Hits for " << damage << " damage!" << std::endl;
         }else{
-            std::cout << name << " attempts to hit, but is blocked!";
+            std::cout << name << " attempts to hit, but is blocked!" << std::endl;
         }
     }
 
@@ -34,7 +34,7 @@ public:
         return hp;
     }
 
-    friend std::ostream &operator << (std::ostream output, const Character &c){
+    friend std::ostream &operator << (std::ostream &output, const Character &c){
         output << c.name << " " << c.hp << std::endl;
         return output;
     }

@@ -8,11 +8,16 @@
 #include <iostream>
 #include "Character.h"
 
-class Wizzard{
-private:
-
+class Wizzard : public Character{
 public:
+    Wizzard(std::string name, int hp, int magic) : Character(name, hp), magic(magic){}
 
+    void startBattle(){
+        attack = (rand() % 10) + 2 + magic;
+        defence = (rand() % 10) + 2 + magic;
+    }
+private:
+    int magic;
 
 };
 
