@@ -3,4 +3,4 @@ project(inheritanceLearning)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(inheritanceLearning main.cpp)
+add_executable(inheritanceLearning main.cpp Wizzard.h Character.h)
